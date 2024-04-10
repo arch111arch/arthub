@@ -1,0 +1,14 @@
+.NavBar {
+
+    background-color: hsl(0, 0%, 100%);
+    border: 1px solid hsl(0, 0%, 49%);
+}
+
+.NavLink {
+
+    padding: 5px;
+}
+
+.Active i {
+    color: hsl(240, 100%, 50%);
+}

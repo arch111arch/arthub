@@ -60,13 +60,6 @@ setErrors(err.response?.data);
   
 )}
 
-{errors.username?.map((message, idx) => (
-  <Alert variant="warning" key={idx}>{message}</Alert>
-  
-))}
-
-
-
   <Form.Group controlId="password1">
     <Form.Label>Password</Form.Label>
     <Form.Control className={styles.Input} type="password"
@@ -76,7 +69,10 @@ setErrors(err.response?.data);
     onChange={handleChange}
     />
   </Form.Group>
+  {errors.password1?.map((message, idx) => 
+  <Alert variant="warning" key={idx}>{message}</Alert>
   
+)}
   
 
   <Form.Group controlId="password2">
@@ -88,13 +84,19 @@ setErrors(err.response?.data);
     onChange={handleChange}
     />
   </Form.Group>
+  {errors.password2?.map((message, idx) => 
+  <Alert variant="warning" key={idx}>{message}</Alert>
   
-
-
+)}
+  
 
   <Button className={`${btnStyles.Button} ${btnStyles.Wide} ${btnStyles.Bright}`} variant="primary" type="submit">
     Sign up
   </Button>
+  {errors.non_field_errors?.map((message, idx) => 
+  <Alert key={idx} variant="warning" className="mt-3">{message}</Alert>
+  
+)}
 </Form>
 
         </Container>
